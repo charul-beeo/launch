@@ -5,41 +5,64 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Line and Lustre — Coming Soon</title>
   <style>
-    :root { --bg: #EAE6E1; }
+    :root { --bg: #EAE6E1; --text: #1b1b1b; }
+
+    * { box-sizing: border-box; }
     html, body { height: 100%; }
-    body {
-      margin: 0;
-      background: var(--bg);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-      color: #1b1b1b;
+
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--text);
+      font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
     }
-    .wrap {
-      text-align: center;
-      padding: 24px;
+
+    /* Mobile-friendly centering with safe padding */
+    .wrap{
+      min-height: 100svh;               /* better on mobile browsers */
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding: clamp(20px, 6vw, 56px);  /* responsive padding */
     }
-    .logo {
-      max-width: max-width: min(100px, 10vw);
-      height: auto;
-      display: block;
-      margin: 0 auto;
+
+    .card{
+      width: min(720px, 100%);
+      text-align:center;
     }
-    .text {
-      margin-top: 18px;
-      letter-spacing: 0.12em;
+
+    .logo{
+      display:block;
+      margin:0 auto;
+      width: min(520px, 88vw);          /* scales on phones */
+      max-height: 50svh;                /* prevents overflow on small screens */
+      height:auto;
+    }
+
+    .text{
+      margin-top: clamp(14px, 3.5vw, 22px);
+      font-size: clamp(14px, 3.8vw, 18px);
+      letter-spacing: 0.14em;
       text-transform: uppercase;
-      font-size: 14px;
       opacity: 0.85;
+    }
+
+    /* Extra-small screens: tighten spacing */
+    @media (max-width: 360px){
+      .text{ letter-spacing: 0.12em; }
     }
   </style>
 </head>
 <body>
   <main class="wrap">
-    <!-- Replace logo.png with your actual file name/path -->
-    <img class="logo" src="Logo vertical launch green.png" alt="Line and Lustre logo" />
-    <div class="text">Coming Soon</div>
+    <section class="card" aria-label="Coming soon">
+      <!-- Replace logo.png with your actual filename -->
+      <img class="logo" src="Logo vertical launch green.png" alt="Line and Lustre logo" />
+      <div class="text">Coming Soon</div>
+    </section>
   </main>
 </body>
 </html>
+
+
+
