@@ -143,48 +143,7 @@ Whether it’s a whisper of gold or a bold architectural statement, every piece 
       border:0;
     }
     /* Social icon row */
-    .social{
-      margin-top: 18px;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      gap: 14px;
-    }
-    
-    /* Icon button */
-    .social__link{
-      width: 42px;
-      height: 42px;
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      border-radius: 999px;
-      color: var(--text); /* SVG uses currentColor */
-      text-decoration: none;
-      border: 1px solid rgba(0,0,0,0.18);
-      background: rgba(255,255,255,0.10);
-      transition: transform 140ms ease, border-color 140ms ease, background 140ms ease;
-    }
-    
-    .social__link:hover{
-      transform: translateY(-1px);
-      border-color: rgba(0,0,0,0.35);
-      background: rgba(255,255,255,0.18);
-    }
-
-    .social__link:focus-visible{
-      outline: 2px solid rgba(0,0,0,0.65);
-      outline-offset: 3px;
-    }
-    
-    /* SVG sizing */
-    .social__icon{
-      width: 20px;
-      height: 20px;
-      display:block;
-    }
-    
-      .links{
+    .links{
       margin-top: 18px;
       display:flex;
       gap: 14px;
@@ -193,25 +152,48 @@ Whether it’s a whisper of gold or a bold architectural statement, every piece 
     }
     
     .links__item{
-      display: inline-flex;
-      align-items: center;     /* key */
-      gap: 10px;
-      line-height: 1;          /* key: removes baseline weirdness */
-      vertical-align: middle;
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      line-height:1;
+      color: var(--text);
+      text-decoration:none;
+      padding: 10px 14px;
+      border-radius: 999px; /* pill */
+      border: 1px solid rgba(0,0,0,0.14);
+      background: rgba(255,255,255,0.10);
+      transition: background 140ms ease, border-color 140ms ease, transform 140ms ease;
     }
     
     .links__item:hover{
-      border-bottom-color: rgba(0,0,0,0.55);
+      background: rgba(255,255,255,0.18);
+      border-color: rgba(0,0,0,0.26);
+      transform: translateY(-1px);
+    }
+    
+    .links__item:active{
+      transform: translateY(0px);
+    }
+    
+    .links__item:focus-visible{
+      outline: 2px solid rgba(0,0,0,0.55);
+      outline-offset: 3px;
     }
     
     .links__icon{
-      display: block;          /* key: removes inline image baseline gap */
+      display:block;
       width: 18px;
       height: 18px;
-      flex: 0 0 18px;          /* prevents shrinking/stretching */
+      flex: 0 0 18px;
       object-fit: contain;
-      /* tiny optical adjustment (optional) */
-      transform: translateY(0.5px);
+      transform: translateY(0.5px); /* tweak if needed */
+    }
+    
+    .links__text{
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      font-size: 14px;
+      opacity: 0.92;
     }
 
     @media (max-width: 360px){
