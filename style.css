@@ -20,6 +20,7 @@ body{
   display:flex;
   justify-content:center;
   padding: clamp(20px, 6vw, 56px);
+  align-items: stretch; 
 }
 
 .card{
