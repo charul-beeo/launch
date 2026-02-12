@@ -209,6 +209,20 @@ body{
   transition: background 140ms ease, border-color 140ms ease, transform 140ms ease, opacity 140ms ease;
 }
 
+.buttons__item:hover{
+  background: rgba(255,255,255,0.18);
+  border-color: rgba(0,0,0,0.26);
+  transform: translateY(-1px);
+  opacity: 0.95;
+}
+
+.buttons__item:active{ transform: translateY(0px); }
+
+.buttons__item:focus-visible{
+  outline: 2px solid rgba(0,0,0,0.55);
+  outline-offset: 3px;
+}
+
 .links__item{
   display: inline-flex;
   align-items: center;
