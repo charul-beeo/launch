@@ -1,3 +1,7 @@
+/* Line & Lustre — shared site styles
+   This file is used by both index.html and brand_story.html.
+*/
+
 :root { --bg: #EAE6E1; --text: #1b1b1b; }
 
 * { box-sizing: border-box; }
@@ -19,31 +23,32 @@ body{
 }
 
 .card{
-  width: min(820px, 100%);
-}
-
-/* Index page centers vertically */
-.wrap--center{
-  align-items:center;
-}
-
-/* About page starts at top */
-.wrap--top{
-  align-items:flex-start;
-}
-
-/* Index card centered text */
-.card--center{
-  text-align:center;
   width: min(720px, 100%);
 }
 
-/* About card left aligned */
-.card--left{
+/* Page variants */
+.page-home .wrap{ align-items:center; }
+.page-home .card{
+  width: min(720px, 100%);
+  text-align:center;
+}
+
+.page-about .wrap{ align-items:flex-start; }
+.page-about .card{
+  width: min(820px, 100%);
   text-align:left;
 }
 
-/* Logo */
+/* Home page (index.html) */
+.page-home h1{
+  margin: 0 0 14px 0;
+  font-size: clamp(18px, 3.2vw, 22px);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 500;
+  opacity: 0.92;
+}
+
 .logo{
   display:block;
   margin:0 auto;
@@ -52,7 +57,6 @@ body{
   height:auto;
 }
 
-/* Coming soon text */
 .text{
   margin-top: clamp(14px, 3.5vw, 18px);
   font-size: clamp(14px, 3.8vw, 18px);
@@ -61,20 +65,14 @@ body{
   opacity: 0.85;
 }
 
-@media (max-width: 360px){
-  .text{ letter-spacing: 0.12em; }
+.content{
+  margin-top: clamp(14px, 3.5vw, 18px);
+  font-size: clamp(14px, 3.8vw, 18px);
+  letter-spacing: 0.14em;
+  opacity: 0.85;
 }
 
-/* H1 (use for About and optionally for Index if you want it visible) */
-h1{
-  margin: 6px 0 18px 0;
-  font-size: clamp(18px, 3.0vw, 26px);
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  font-weight: 200;
-}
-
-/* Screen-reader only helper */
+/* Visually hidden (SEO helper) */
 .sr-only{
   position:absolute !important;
   width:1px; height:1px;
@@ -85,70 +83,7 @@ h1{
   border:0;
 }
 
-/* Social pill links */
-.links{
-  margin-top: 18px;
-  width: 100%;
-  display:flex;
-  justify-content:center;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.links--left{
-  justify-content:flex-start;
-}
-
-.links__item{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  width: fit-content;
-  line-height: 1;
-  gap: 10px;
-
-  padding: 10px 16px;
-  border-radius: 999px;
-
-  color: var(--text);
-  text-decoration:none;
-
-  border: 1px solid rgba(0,0,0,0.14);
-  background: rgba(255,255,255,0.10);
-  transition: background 140ms ease, border-color 140ms ease, transform 140ms ease, opacity 140ms ease;
-}
-
-.links__item:hover{
-  background: rgba(255,255,255,0.18);
-  border-color: rgba(0,0,0,0.26);
-  transform: translateY(-1px);
-  opacity: 0.95;
-}
-
-.links__item:active{ transform: translateY(0px); }
-
-.links__item:focus-visible{
-  outline: 2px solid rgba(0,0,0,0.55);
-  outline-offset: 3px;
-}
-
-.links__icon{
-  display:block;
-  width: 18px;
-  height: 18px;
-  flex: 0 0 18px;
-  object-fit: contain;
-  transform: none; /* keep neutral; adjust only if your PNG has padding */
-}
-
-.links__text{
-  letter-spacing: 0.10em;
-  text-transform: uppercase;
-  font-size: 13px;
-  opacity: 0.92;
-}
-
-/* About page header + navigation (optional, used in about.html) */
+/* About / Brand story page (brand_story.html) */
 .top{
   display:flex;
   align-items:center;
@@ -199,24 +134,34 @@ h1{
   outline-offset: 3px;
 }
 
-/* About page prose */
+.page-about h1{
+  margin: 6px 0 18px 0;
+  font-size: clamp(18px, 3.0vw, 26px);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 200;
+}
+
+/* Body copy */
 .prose{
-  font-size: clamp(13px, 2.1vw, 15px);
+  font-size: clamp(10px, 1.5vw, 12px);
   line-height: 1.75;
-  max-width: 70ch;
+  max-width: 90ch;
   opacity: 0.92;
 }
 
 .prose p{ margin: 0 0 16px 0; }
 .prose p:last-child{ margin-bottom: 0; }
 
+/* Subtle divider */
 .divider{
-  margin: 18px 0;
+  margin: 18px 0 18px 0;
   height: 1px;
   background: rgba(0,0,0,0.10);
   width: min(520px, 100%);
 }
 
+/* Signature / closing */
 .signature{
   margin-top: 18px;
   letter-spacing: 0.10em;
@@ -227,7 +172,89 @@ h1{
 
 .signature strong{ font-weight: 600; }
 
+/* Links / pills (shared) */
+.links,
+.social_links{
+  margin-top: 18px;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content:center;
+  gap: 14px;
+}
+
+.page-about .links{
+  width: 100%;
+  justify-content:flex-start;
+  gap: 12px;
+}
+
+.social_links{
+  margin-top: auto;
+  padding-top: 18px;
+}
+
+.links__item{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  line-height: 1;
+  gap: 10px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  color: var(--text);
+  text-decoration: none;
+  border: 1px solid rgba(0,0,0,0.14);
+  background: rgba(255,255,255,0.10);
+  transition: background 140ms ease, border-color 140ms ease, transform 140ms ease, opacity 140ms ease;
+}
+
+.links__item:hover{
+  background: rgba(255,255,255,0.18);
+  border-color: rgba(0,0,0,0.26);
+  transform: translateY(-1px);
+  opacity: 0.95;
+}
+
+.links__item:active{ transform: translateY(0px); }
+
+.links__item:focus-visible{
+  outline: 2px solid rgba(0,0,0,0.55);
+  outline-offset: 3px;
+}
+
+.links__icon{
+  display:block;
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
+  object-fit: contain;
+  transform: translateY(0.5px); /* tweak if needed */
+}
+
+.links__text{
+  display:inline-block;
+  line-height: 1;
+  letter-spacing: 0.10em;
+  opacity: 0.92;
+}
+
+.page-about .links__text{
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+.page-home .links__text{
+  font-size: 14px;
+  text-transform: none;
+}
+
 @media (max-width: 520px){
   .nav a{ padding: 8px 10px; }
-  .links{ justify-content:center; }
+  .page-about .links{ justify-content: center; }
+  .page-about .card{ text-align:left; }
+}
+
+@media (max-width: 360px){
+  .text{ letter-spacing: 0.12em; }
 }
