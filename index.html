@@ -116,7 +116,7 @@ Whether it’s a whisper of gold or a bold architectural statement, every piece 
       margin-top: 18px;
       font-size: 14px;
       letter-spacing: 0.08em;
-      text-transform: uppercase;
+      line-height: 1;  
       opacity: 0.9;
       display:flex;
       gap: 14px;
@@ -143,77 +143,76 @@ Whether it’s a whisper of gold or a bold architectural statement, every piece 
       border:0;
     }
     /* Social icon row */
-.social{
-  margin-top: 18px;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  gap: 14px;
-}
+    .social{
+      margin-top: 18px;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      gap: 14px;
+    }
+    
+    /* Icon button */
+    .social__link{
+      width: 42px;
+      height: 42px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      border-radius: 999px;
+      color: var(--text); /* SVG uses currentColor */
+      text-decoration: none;
+      border: 1px solid rgba(0,0,0,0.18);
+      background: rgba(255,255,255,0.10);
+      transition: transform 140ms ease, border-color 140ms ease, background 140ms ease;
+    }
+    
+    .social__link:hover{
+      transform: translateY(-1px);
+      border-color: rgba(0,0,0,0.35);
+      background: rgba(255,255,255,0.18);
+    }
 
-/* Icon button */
-.social__link{
-  width: 42px;
-  height: 42px;
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  border-radius: 999px;
-  color: var(--text); /* SVG uses currentColor */
-  text-decoration: none;
-  border: 1px solid rgba(0,0,0,0.18);
-  background: rgba(255,255,255,0.10);
-  transition: transform 140ms ease, border-color 140ms ease, background 140ms ease;
-}
-
-.social__link:hover{
-  transform: translateY(-1px);
-  border-color: rgba(0,0,0,0.35);
-  background: rgba(255,255,255,0.18);
-}
-
-.social__link:focus-visible{
-  outline: 2px solid rgba(0,0,0,0.65);
-  outline-offset: 3px;
-}
-
-/* SVG sizing */
-.social__icon{
-  width: 20px;
-  height: 20px;
-  display:block;
-}
-
-    .links{
-  margin-top: 18px;
-  display:flex;
-  gap: 14px;
-  justify-content:center;
-  flex-wrap: wrap;
-}
-
-.links__item{
-  display:inline-flex;
-  align-items:center;
-  gap: 10px;
-  color: var(--text);
-  text-decoration: none;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  font-size: 14px;
-  border-bottom: 1px solid rgba(0,0,0,0.25);
-  padding-bottom: 2px;
-}
-
-.links__item:hover{
-  border-bottom-color: rgba(0,0,0,0.55);
-}
-
-.links__icon{
-  display:block;
-  width: 18px;
-  height: 18px;
-}
+    .social__link:focus-visible{
+      outline: 2px solid rgba(0,0,0,0.65);
+      outline-offset: 3px;
+    }
+    
+    /* SVG sizing */
+    .social__icon{
+      width: 20px;
+      height: 20px;
+      display:block;
+    }
+    
+      .links{
+      margin-top: 18px;
+      display:flex;
+      gap: 14px;
+      justify-content:center;
+      flex-wrap: wrap;
+    }
+    
+    .links__item{
+      display: inline-flex;
+      align-items: center;     /* key */
+      gap: 10px;
+      line-height: 1;          /* key: removes baseline weirdness */
+      vertical-align: middle;
+    }
+    
+    .links__item:hover{
+      border-bottom-color: rgba(0,0,0,0.55);
+    }
+    
+    .links__icon{
+      display: block;          /* key: removes inline image baseline gap */
+      width: 18px;
+      height: 18px;
+      flex: 0 0 18px;          /* prevents shrinking/stretching */
+      object-fit: contain;
+      /* tiny optical adjustment (optional) */
+      transform: translateY(0.5px);
+    }
 
     @media (max-width: 360px){
       .text{ letter-spacing: 0.12em; }
