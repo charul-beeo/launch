@@ -3,7 +3,61 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Line and Lustre — Coming Soon</title>
+
+  <!-- ✅ SEO: Title should include brand + category -->
+  <title>Line & Lustre | Statement Minimal Jewelry in Norway — Coming Soon</title>
+
+  <!-- ✅ SEO: Meta description (150–160ish chars) -->
+  <meta name="description" content="Line & Lustre is a statement-minimal jewelry brand based in Norway. Launching soon. Follow @wearlineandlustre for drops, styling, and updates." />
+
+  <!-- ✅ SEO: Robots (allow indexing) -->
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+
+  <!-- ✅ SEO: Canonical (replace with your real domain URL) -->
+  <link rel="canonical" href="https://www.lineandlustre.com/" />
+
+  <!-- ✅ Social previews (Open Graph) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Line & Lustre" />
+  <meta property="og:title" content="Line & Lustre | Statement Minimal Jewelry — Coming Soon" />
+  <meta property="og:description" content="Statement-minimal jewelry brand based in Norway. Launching soon. Follow @wearlineandlustre." />
+  <meta property="og:url" content="https://www.lineandlustre.com/" />
+  <!-- Replace with a real absolute URL to a share image (1200x630 recommended) -->
+  <meta property="og:image" content="https://www.lineandlustre.com/og-image.jpg" />
+
+  <!-- Twitter card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Line & Lustre | Statement Minimal Jewelry — Coming Soon" />
+  <meta name="twitter:description" content="Launching soon. Follow @wearlineandlustre for updates." />
+  <meta name="twitter:image" content="https://www.lineandlustre.com/og-image.jpg" />
+
+  <!-- ✅ Optional but good: preloading logo (speeds first paint) -->
+  <link rel="preload" as="image" href="Logo vertical launch green.png" />
+
+  <!-- ✅ Structured Data: Organization + Website (helps Google connect brand + Instagram) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Line & Lustre",
+    "url": "https://www.lineandlustre.com/",
+    "logo": "https://www.lineandlustre.com/Logo%20vertical%20launch%20green.png",
+    "sameAs": [
+      "https://www.instagram.com/wearlineandlustre/"
+    ],
+    "description": "Statement-minimal jewelry brand based in Norway. Launching soon."
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Line & Lustre",
+    "url": "https://www.lineandlustre.com/"
+  }
+  </script>
+
   <style>
     :root { --bg: #EAE6E1; --text: #1b1b1b; }
 
@@ -17,13 +71,12 @@
       font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
     }
 
-    /* Mobile-friendly centering with safe padding */
     .wrap{
-      min-height: 100svh;               /* better on mobile browsers */
+      min-height: 100svh;
       display:flex;
       align-items:center;
       justify-content:center;
-      padding: clamp(20px, 6vw, 56px);  /* responsive padding */
+      padding: clamp(20px, 6vw, 56px);
     }
 
     .card{
@@ -31,38 +84,94 @@
       text-align:center;
     }
 
+    /* ✅ SEO: make the H1 exist (can be visually subtle) */
+    h1{
+      margin: 0 0 14px 0;
+      font-size: clamp(18px, 3.2vw, 22px);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 500;
+      opacity: 0.92;
+    }
+
     .logo{
       display:block;
       margin:0 auto;
-      width: min(520px, 88vw);          /* scales on phones */
-      max-height: 50svh;                /* prevents overflow on small screens */
+      width: min(520px, 88vw);
+      max-height: 50svh;
       height:auto;
     }
 
     .text{
-      margin-top: clamp(14px, 3.5vw, 22px);
+      margin-top: clamp(14px, 3.5vw, 18px);
       font-size: clamp(14px, 3.8vw, 18px);
       letter-spacing: 0.14em;
       text-transform: uppercase;
       opacity: 0.85;
     }
 
-    /* Extra-small screens: tighten spacing */
+    .links{
+      margin-top: 18px;
+      font-size: 14px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      opacity: 0.9;
+      display:flex;
+      gap: 14px;
+      justify-content:center;
+      flex-wrap: wrap;
+    }
+
+    .links a{
+      color: var(--text);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(0,0,0,0.25);
+      padding-bottom: 2px;
+    }
+    .links a:hover{ border-bottom-color: rgba(0,0,0,0.55); }
+
+    /* ✅ Crawlable helper text that stays invisible but helps SEO */
+    .sr-only{
+      position:absolute !important;
+      width:1px; height:1px;
+      padding:0; margin:-1px;
+      overflow:hidden;
+      clip:rect(0,0,0,0);
+      white-space:nowrap;
+      border:0;
+    }
+
     @media (max-width: 360px){
       .text{ letter-spacing: 0.12em; }
     }
   </style>
 </head>
+
 <body>
   <main class="wrap">
-    <section class="card" aria-label="Coming soon">
-      <!-- Replace logo.png with your actual filename -->
-      <img class="logo" src="Logo vertical launch green.png" alt="Line and Lustre logo" />
+    <section class="card" aria-label="Line & Lustre coming soon">
+      <!-- ✅ Visible H1 for Google -->
+      <h1>Line & Lustre — Statement Minimal Jewelry</h1>
+
+      <img class="logo"
+           src="Logo vertical launch green.png"
+           alt="Line & Lustre logo — statement minimal jewelry brand" />
+
       <div class="text">Coming Soon</div>
+
+      <!-- ✅ Simple link signals (helps Google connect brand to Instagram) -->
+      <nav class="links" aria-label="Links">
+        <a href="https://www.instagram.com/wearlineandlustre/" rel="me">Instagram @wearlineandlustre</a>
+        <!-- Optional: add your email if you want -->
+        <!-- <a href="mailto:hello@lineandlustre.com">Email</a> -->
+      </nav>
+
+      <!-- ✅ Hidden but crawlable content: gives Google keywords without changing your minimal look -->
+      <div class="sr-only">
+        <p>Line & Lustre is a statement-minimal jewelry brand based in Norway. We design modern chokers, earrings, necklaces, and bracelets.</p>
+        <p>Follow our Instagram page @wearlineandlustre for launch updates, new drops, styling ideas, and behind-the-scenes.</p>
+      </div>
     </section>
   </main>
 </body>
 </html>
-
-
-
