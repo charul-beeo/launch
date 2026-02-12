@@ -151,15 +151,22 @@ Whether it’s a whisper of gold or a bold architectural statement, every piece 
       flex-wrap: wrap;
     }
     
+    /* Make each pill hug its content and center its contents */
     .links__item{
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      line-height:1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    
+      width: fit-content;      /* key */
+      line-height: 1;          /* key */
+    
+      gap: 10px;
+      padding: 10px 16px;      /* symmetric padding */
+      border-radius: 999px;
+    
       color: var(--text);
-      text-decoration:none;
-      padding: 10px 14px;
-      border-radius: 999px; /* pill */
+      text-decoration: none;
+    
       border: 1px solid rgba(0,0,0,0.14);
       background: rgba(255,255,255,0.10);
       transition: background 140ms ease, border-color 140ms ease, transform 140ms ease;
@@ -191,7 +198,6 @@ Whether it’s a whisper of gold or a bold architectural statement, every piece 
     
     .links__text{
       letter-spacing: 0.10em;
-      text-transform: uppercase;
       font-size: 14px;
       opacity: 0.92;
     }
