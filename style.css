@@ -193,7 +193,7 @@ body{
   padding-top: 18px;
 }
 
-.links__item{
+.buttons__item{
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -209,6 +209,19 @@ body{
   transition: background 140ms ease, border-color 140ms ease, transform 140ms ease, opacity 140ms ease;
 }
 
+.links__item{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  line-height: 1;
+  gap: 10px;
+  padding: 10px 16px;
+  color: var(--text);
+  text-decoration: none;
+  background: rgba(255,255,255,0.10);
+  transition: background 140ms ease, border-color 140ms ease, transform 140ms ease, opacity 140ms ease;
+}
 .links__item:hover{
   background: rgba(255,255,255,0.18);
   border-color: rgba(0,0,0,0.26);
