@@ -184,6 +184,37 @@ Whether it’s a whisper of gold or a bold architectural statement, every piece 
   display:block;
 }
 
+    .links{
+  margin-top: 18px;
+  display:flex;
+  gap: 14px;
+  justify-content:center;
+  flex-wrap: wrap;
+}
+
+.links__item{
+  display:inline-flex;
+  align-items:center;
+  gap: 10px;
+  color: var(--text);
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 14px;
+  border-bottom: 1px solid rgba(0,0,0,0.25);
+  padding-bottom: 2px;
+}
+
+.links__item:hover{
+  border-bottom-color: rgba(0,0,0,0.55);
+}
+
+.links__icon{
+  display:block;
+  width: 18px;
+  height: 18px;
+}
+
     @media (max-width: 360px){
       .text{ letter-spacing: 0.12em; }
     }
