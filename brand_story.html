@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About | Line & Lustre</title>
+
+  <style>
+    :root { --bg: #EAE6E1; --text: #1b1b1b; }
+
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--text);
+      font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    }
+
+    .wrap{
+      min-height: 100svh;
+      display:flex;
+      align-items:flex-start;
+      justify-content:center;
+      padding: clamp(20px, 6vw, 56px);
+    }
+
+    .card{
+      width: min(820px, 100%);
+      text-align:left;
+    }
+
+    /* Header */
+    .top{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 14px;
+      margin-bottom: 18px;
+      flex-wrap: wrap;
+    }
+
+    .brand{
+      font-size: 14px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      opacity: 0.85;
+      margin:0;
+    }
+
+    .nav{
+      display:flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items:center;
+    }
+
+    .nav a{
+      color: var(--text);
+      text-decoration: none;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      font-size: 12px;
+      opacity: 0.85;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(0,0,0,0.12);
+      background: rgba(255,255,255,0.08);
+      transition: background 140ms ease, border-color 140ms ease, transform 140ms ease, opacity 140ms ease;
+    }
+    .nav a:hover{
+      background: rgba(255,255,255,0.16);
+      border-color: rgba(0,0,0,0.22);
+      transform: translateY(-1px);
+      opacity: 0.92;
+    }
+    .nav a:focus-visible{
+      outline: 2px solid rgba(0,0,0,0.55);
+      outline-offset: 3px;
+    }
+
+    /* Page title */
+    h1{
+      margin: 6px 0 18px 0;
+      font-size: clamp(22px, 4.2vw, 34px);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+
+    /* Body copy */
+    .prose{
+      font-size: clamp(15px, 2.6vw, 17px);
+      line-height: 1.75;
+      max-width: 70ch;
+      opacity: 0.92;
+    }
+
+    .prose p{
+      margin: 0 0 16px 0;
+    }
+
+    .prose p:last-child{
+      margin-bottom: 0;
+    }
+
+    /* Subtle divider */
+    .divider{
+      margin: 18px 0 18px 0;
+      height: 1px;
+      background: rgba(0,0,0,0.10);
+      width: min(520px, 100%);
+    }
+
+    /* Signature / closing */
+    .signature{
+      margin-top: 18px;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      font-size: 13px;
+      opacity: 0.9;
+    }
+
+    .signature strong{
+      font-weight: 600;
+    }
+
+    /* Social links pill (same style as earlier) */
+    .links{
+      margin-top: 18px;
+      width: 100%;
+      display:flex;
+      justify-content:flex-start;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .links__item{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: fit-content;
+      line-height: 1;
+      gap: 10px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      color: var(--text);
+      text-decoration: none;
+      border: 1px solid rgba(0,0,0,0.14);
+      background: rgba(255,255,255,0.10);
+      transition: background 140ms ease, border-color 140ms ease, transform 140ms ease, opacity 140ms ease;
+    }
+
+    .links__item:hover{
+      background: rgba(255,255,255,0.18);
+      border-color: rgba(0,0,0,0.26);
+      transform: translateY(-1px);
+      opacity: 0.95;
+    }
+
+    .links__item:active{ transform: translateY(0px); }
+
+    .links__item:focus-visible{
+      outline: 2px solid rgba(0,0,0,0.55);
+      outline-offset: 3px;
+    }
+
+    .links__icon{
+      display:block;
+      width: 18px;
+      height: 18px;
+      flex: 0 0 18px;
+      object-fit: contain;
+    }
+
+    .links__text{
+      display:inline-block;
+      line-height: 1;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      font-size: 13px;
+      opacity: 0.92;
+    }
+
+    @media (max-width: 520px){
+      .nav a{ padding: 8px 10px; }
+      .links{ justify-content: center; }
+      .card{ text-align:left; }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="wrap">
+    <section class="card" aria-label="About Line and Lustre">
+      <header class="top">
+        <p class="brand">Line &amp; Lustre</p>
+        <nav class="nav" aria-label="Site navigation">
+          <a href="index.html">Home</a>
+          <a href="about.html" aria-current="page">About</a>
+          <a href="https://www.instagram.com/wearlineandlustre/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        </nav>
+      </header>
+
+      <h1>About</h1>
+
+      <div class="prose">
+        <p>
+          Line &amp; Lustre is the art of the intentional. It is where quiet discipline meets an expressive soul.
+          Rooted in the serene minimalism of Scandinavian design and inspired by the intricate richness of Asian artistry,
+          we create jewelry that speaks without shouting.
+        </p>
+
+        <p>
+          Born in Grimstad, Norway, a small coastal town far from the noise of the fashion capitals, Line &amp; Lustre began
+          with a simple conviction: modern jewelry should feel personal, expressive, and empowering, without being inaccessible.
+        </p>
+
+        <p>
+          In Norway, much of the market sits at two extremes, very minimal basics or expensive fine pieces that do not always
+          justify the premium. Line &amp; Lustre exists between those points: thoughtfully curated pieces with personality and presence,
+          selected one by one for shape, proportion, and wearability, guided by intention, not trends.
+        </p>
+
+        <p>
+          Our design perspective is shaped by a meeting of cultures. Scandinavia brings clarity, restraint, and timeless silhouettes.
+          Asia brings meaning, symbolism, and a deep relationship with adornment, where jewelry is more than an accessory.
+          It carries identity, celebration and strength. Line &amp; Lustre brings these worlds together through clean, modern forms with nuanced detail.
+        </p>
+
+        <p>
+          Created for duality, the collection moves between everyday signatures and statement moments, between a whisper of gold and a bold architectural line.
+          Each piece is chosen for the fluid rhythm of modern life, effortless enough for a slow morning coffee, yet commanding enough for a midnight toast.
+        </p>
+
+        <p>
+          We believe in giving you that litt ekstra glans, the finishing touch that turns the everyday into something extraordinary.
+          Because jewelry should not compete with you. It should sharpen the way you show up.
+        </p>
+
+        <div class="divider" role="presentation"></div>
+
+        <p class="signature">
+          <strong>Line &amp; Lustre.</strong> Defined lines. Lasting lustre.<br />
+          Wear it your way.
+        </p>
+
+        <nav class="links" aria-label="Social links">
+          <a class="links__item"
+             href="https://www.instagram.com/wearlineandlustre/"
+             target="_blank" rel="me noopener noreferrer"
+             aria-label="Line and Lustre on Instagram (@wearlineandlustre)">
+            <img class="links__icon" src="social_insta.png" alt="" width="18" height="18" loading="lazy" decoding="async" />
+            <span class="links__text">@wearlineandlustre</span>
+          </a>
+
+          <!-- Optional TikTok -->
+          <!--
+          <a class="links__item"
+             href="https://www.tiktok.com/@wearlineandlustre"
+             target="_blank" rel="noopener noreferrer"
+             aria-label="Line and Lustre on TikTok (@wearlineandlustre)">
+            <img class="links__icon" src="social_tiktok.png" alt="" width="18" height="18" loading="lazy" decoding="async" />
+            <span class="links__text">@wearlineandlustre</span>
+          </a>
+          -->
+        </nav>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
