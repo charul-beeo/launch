@@ -24,6 +24,10 @@ body{
 
 .card{
   width: min(720px, 100%);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
 }
 
 /* Page variants */
@@ -190,7 +194,11 @@ body{
 
 .social_links{
   margin-top: auto;
-  padding-top: 18px;
+  padding-top: 24px;
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
 }
 
 .buttons__item{
