@@ -5,6 +5,7 @@
   preserveAspectRatio="xMidYMid meet">
           
           <style>
+                           @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
           .draw path {
             stroke-dasharray: 400;
             stroke-dashoffset: 400;
@@ -49,6 +50,8 @@
           60%  { opacity: 1; }
           100% { transform: scale(1) rotate(0deg); opacity: 1; }
         }
+      
+
 .wordmark {
   fill: #3A504C;
   font-family: 'Montserrat', sans-serif;
