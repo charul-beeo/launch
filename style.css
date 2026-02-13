@@ -297,6 +297,16 @@ body{
   text-transform: none;
 }
 
+@keyframes pIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.p-anim {
+  opacity: 0;
+  animation: pIn 700ms ease forwards;
+}
+
 @media (max-width: 520px){
   .nav a{ padding: 8px 10px; }
   .page-about .links{ justify-content: center; }
