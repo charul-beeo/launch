@@ -132,8 +132,18 @@
                     stroke-width="1.5"/>
           
             </g>
+
           
           </g>
-          
+                                      <!-- WORDMARK -->
+  <text x="400" y="400"
+        fill="#3A504C"
+        font-size="26"
+        font-family="Montserrat, Avenir Next, Helvetica Neue, Arial, sans-serif"
+        font-weight="100"
+        text-anchor="middle"
+        style="letter-spacing:12px">
+    LINE &amp; LUSTRE
+  </text> 
           </g>
           </svg>
