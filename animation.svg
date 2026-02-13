@@ -49,6 +49,24 @@
           60%  { opacity: 1; }
           100% { transform: scale(1) rotate(0deg); opacity: 1; }
         }
+                .wordmark {
+  fill: #3A504C;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 26px;
+  font-weight: 200;
+  letter-spacing: 12px;
+
+  opacity: 0;
+  transform: translateY(8px);
+  animation: wordReveal 1.2s cubic-bezier(0.16, 1, 0.3, 1) 2.2s forwards;
+}
+
+@keyframes wordReveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
           </style>
           
           <g fill="none"
@@ -136,14 +154,12 @@
           
           </g>
                                       <!-- WORDMARK -->
-  <text x="400" y="400"
-        fill="#3A504C"
-        font-size="26"
-        font-family="Montserrat, Avenir Next, Helvetica Neue, Arial, sans-serif"
-        font-weight="100"
-        text-anchor="middle"
-        style="letter-spacing:12px">
-    LINE &amp; LUSTRE
-  </text> 
+<text
+  x="450"
+  y="470"
+  class="wordmark"
+  text-anchor="middle">
+  LINE &amp; LUSTRE
+</text>
           </g>
           </svg>
