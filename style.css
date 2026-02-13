@@ -88,16 +88,17 @@ body{
   border:0;
 }
 
-.hero-svg {
+    .hero-svg {
   display: block;
   margin: 0 auto;
-  width: min(900px, 90vw);
+  width:340px;   /* <- this matches Image 2 size */
+  max-width: 80vw;
   height: auto;
 }
 .hero-svg text,
 .hero-svg .wordmark {
   font-family: "Montserrat", sans-serif;
-  font-weight: 300;
+  font-weight: 100;
 }
 
 /* About / Brand story page (brand_story.html) */
