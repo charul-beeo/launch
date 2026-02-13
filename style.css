@@ -32,7 +32,7 @@ body{
 }
 
 /* Page variants */
-.page-home .wrap{ align-items:center; }
+.page-home .wrap{ align-items: stretch;  }
 .page-home .card{
   width: min(720px, 100%);
   text-align:center;
