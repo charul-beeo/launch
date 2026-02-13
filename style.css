@@ -94,6 +94,11 @@ body{
   width: min(900px, 90vw);
   height: auto;
 }
+.hero-svg text,
+.hero-svg .wordmark {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+}
 
 /* About / Brand story page (brand_story.html) */
 .top{
