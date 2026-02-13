@@ -1,7 +1,8 @@
       <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 900 520"
-     width="900"
-     height="520">
+
+  class="hero-svg"
+  viewBox="250 50 400 400"
+  preserveAspectRatio="xMidYMid meet">
           
           <style>
           .draw path {
