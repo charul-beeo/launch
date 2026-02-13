@@ -53,7 +53,7 @@
   fill: #3A504C;
   font-family: 'Montserrat', sans-serif;
   font-size: 26px;
-  font-weight: 200;
+  font-weight: 100;
   letter-spacing: 12px;
 
   opacity: 0;
@@ -155,8 +155,8 @@
           </g>
                                       <!-- WORDMARK -->
 <text
-  x="450"
-  y="470"
+  x="400"
+  y="400"
   class="wordmark"
   text-anchor="middle">
   LINE &amp; LUSTRE
