@@ -31,29 +31,24 @@
           }
           
           .sparkle-big {
-            animation: luxeReveal 1.2s cubic-bezier(0.16, 1, 0.3, 1) 1.4s forwards;
+            animation: sparkleReveal 1.2s cubic-bezier(0.16, 1, 0.3, 1) 1.4s forwards;
           }
           
           .sparkle-small {
-            animation: luxeReveal 1.1s cubic-bezier(0.16, 1, 0.3, 1) 1.8s forwards;
+            animation: sparkleReveal_small 1.1s cubic-bezier(0.16, 1, 0.3, 1) 1.6s forwards;
           }
           
-          @keyframes luxeReveal {
-          
-            0% {
-              transform: translateY(6px) scale(1.25);
-              opacity: 0;
-            }
-          
-            60% {
-              opacity: 1;
-            }
-          
-            100% {
-              transform: translateY(0px) scale(1);
-              opacity: 1;
-            }
-          }
+            @keyframes sparkleReveal {
+          0%   { transform: scale(4) rotate(180deg); opacity: 0; }
+          60%  { opacity: 1; }
+          100% { transform: scale(1) rotate(0deg); opacity: 1; }
+        }
+            
+        @keyframes sparkleReveal_small {
+          0%   { transform: scale(2) rotate(-180deg); opacity: 0; }
+          60%  { opacity: 1; }
+          100% { transform: scale(1) rotate(0deg); opacity: 1; }
+        }
           </style>
           
           <g fill="none"
@@ -106,6 +101,7 @@
                </g>
           
           <!-- big sparkle -->
+          
           <g transform="translate(31,78) scale(2)">
             <g class="sparkle-big">
               <path d="M162 93C162 97.97056 166.0294 102 171 102C166.0294 102 162 106.0294 162 111C162 106.0294 157.97056 102 153 102C157.97056 102 162 97.97056 162 93Z"
@@ -116,6 +112,14 @@
           </g>
           
             <!-- SMALL SPARKLE -->
+                          <!-- horizontal accent line -->
+             <g class="draw delay3" stroke-width="1.2">
+              <path d="M330 282 L380 282"
+                    
+                    stroke="#222"
+                    stroke-width="2"
+                    fill="none"/>
+                 </g>
           
           <g transform="translate(283,58)">
             
