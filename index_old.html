@@ -280,5 +280,14 @@ Whether it’s a whisper of gold or a bold architectural statement, every piece 
   </main>
 </body>
   
-
+<script>
+  window.addEventListener("pageshow", (e) => {
+    // If the page was restored from cache, reload the <img>
+    if (e.persisted) {
+      const img = document.getElementById("logo");
+      const base = img.src.split("?")[0];
+      img.src = base + "?v=" + Date.now();
+    }
+  });
+</script>
 </html>
