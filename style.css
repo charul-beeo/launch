@@ -88,6 +88,13 @@ body{
   border:0;
 }
 
+.hero-svg {
+  display: block;
+  margin: 0 auto;
+  width: min(900px, 90vw);
+  height: auto;
+}
+
 /* About / Brand story page (brand_story.html) */
 .top{
   display:flex;
