@@ -5,7 +5,7 @@
   preserveAspectRatio="xMidYMid meet">
           
           <style>
-                           @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+                          
           .draw path {
             stroke-dasharray: 400;
             stroke-dashoffset: 400;
